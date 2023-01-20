@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sem 4</title>
+        <style type="text/css">
+            h1{
+            color:#FE03EB;
+              }
+            body{background-color:#FAFA05}
+        </style>
+        <script>
+            function grade(x){
+                if(x=="o" || x=="O"){
+                    return 10;
+                }
+                else if(x=="a+" || x=="A+"){
+                    return 9;
+                }
+                else if(x=="a" || x=="A"){
+                    return 8;
+                }
+                else if(x=="b+" || x=="B+"){
+                    return 7;
+                }
+                else if(x=="b" || x=="B"){
+                    return 6;
+                }
+                else{
+                    return 0;
+                }
+
+
+            }
+            function gpa(){
+                var a1=document.getElementById("a1").value;
+                var a2=document.getElementById("a2").value;
+                var a3=document.getElementById("a3").value;
+                var a4=document.getElementById("a4").value;
+                var a5=document.getElementById("a5").value;
+                var a6=document.getElementById("a6").value;
+                var a7=document.getElementById("a7").value;
+                var a8=document.getElementById("a8").value;
+                var a9=document.getElementById("a9").value;
+
+                var b1=4*grade(a1);
+                var b2=3*grade(a2);
+                var b3=3*grade(a3);
+                var b4=3*grade(a4);
+                var b5=3*grade(a5);
+                var b6=3*grade(a6);
+                var b7=2*grade(a7);
+                var b8=2*grade(a8);
+                var b9=1*grade(a9);
+
+                var gpa=(b1+b2+b3+b4+b5+b6+b7+b8+b9)/24;
+
+                message.innerHTML="4th sem GPA is "+gpa;
+                }
+        </script>
+    </head>
+    <body style="text-align:center">
+        <h1>Anna University R-2017 Mech(sem-4)</h1>
+        <h1>GPA Calculator</h1>
+        <form name = "myform">
+            <h2>1 Statistics and Numerical Methods - MA8452</h2><br>
+            <input type = "text" id="a1" style="font-size:200%"><br>
+
+            <h2>2 Kinematics of Machinery - ME8492</h2><br>
+            <input type = "text" id="a2" style="font-size:200%"><br>
+
+            <h2>3 Manufacturing Technology II - ME8451</h2><br>
+            <input type="text" id="a3" style="font-size:200%"><br>
+
+            <h2>4 Engineering Metallurgy - ME8491</h2><br>
+            <input type="text" id="a4" style="font-size:200%"><br>
+
+            <h2>5 Strength of Materials for Mechanical Engineers - CE8395</h2><br>
+            <input type="text" id="a5" style="font-size:200%"><br>
+
+            <h2>6 Thermal Engineering- I - ME8493</h2><br>
+            <input type="text" id="a6" style="font-size:200%"><br>
+
+            <h2>7 Manufacturing Technology LabII - ME8462</h2><br>
+            <input type="text" id="a7" style="font-size:200%"><br>
+
+            <h2>8 Strength of Materials & fluid MM Lab - CE8381</h2><br>
+            <input type="text" id="a8" style="font-size:200%"><br>
+
+            <h2>9 Advanced Reading and Writing - HS8461</h2><br>
+            <input type="text" id="a9" style="font-size:200%"><br><br><br>
+
+            
+           
+
+            <input type="button" value="CALCULATE" onclick="gpa()" style="font-size:200%"><br>
+
+            
+            <h2  style="color:red" id="message"></h2>
+
+            
+       
+
+        </form>
+        
+    </body>
+</html>
